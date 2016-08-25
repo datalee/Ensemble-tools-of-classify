@@ -1,0 +1,30 @@
+data("iris")
+iris.data <- iris
+
+iris.label <- as.numeric(iris.data$Species)
+iris.data <- as.matrix(iris.data[,-5])
+
+iris.train <- list(iris.data,iris.label) //用于训练的数据
+
+#需要加载的包
+library(maxent)
+library(glmnet)
+library(tree)
+library(nnet)
+library(e1071)
+library(ipred)
+library(caTools)
+library(Matrix)
+library(randomForest)
+
+#训练模型
+models <- train_models_list(iris.train, algorithms=c("MAXENT","SVM","GLMNET","SLDA","TREE","BAGGING","BOOSTING","RF"))
+
+#预测结果
+results <- classify_models_list(iris.train,models)
+
+#预测结果汇总
+scoreSummary <- create_scoreSummary_list(iris.train,results)
+
+#算法评估
+algorithm_summary <- as.data.frame(create_precisionRecallSummary_list(iris.train, results, 1))
