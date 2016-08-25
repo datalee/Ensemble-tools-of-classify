@@ -1,11 +1,11 @@
 Package: Etclassify
 Type: Package
-Title: Automatic data Classification via Supervised Learning
-Version: 1.0.0
-Date: 2016-08-25
-Author: dataslee
-Maintainer: dataslee <67021597@qq.com>
-Depends: R (>= 2.15.0), methods, SparseM, randomForest, tree, nnet, tm,
-        e1071, ipred, caTools, maxent, glmnet, tau
-Description: Etclassify is a machine learning package for automatic data classification that makes it simple for novice users to get started with machine learning, while allowing experienced users to easily experiment with different settings and algorithm combinations. The package includes nine algorithms for ensemble classification (svm, slda, boosting, bagging, random forests, glmnet, decision trees, neural networks, maximum entropy).
-License: GPL-3
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Author: Who wrote it
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
